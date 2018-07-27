@@ -1,6 +1,7 @@
 # vue-project
 
 > A Vue.js project
+> 一个微信小程序的签到页面
 
 ## Build Setup
 
