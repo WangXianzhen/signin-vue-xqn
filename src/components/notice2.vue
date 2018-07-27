@@ -1,17 +1,12 @@
 <template>
   <div class="notice2">
-	<a href=""><img src="../assets/notice2_03.jpg" height="161" width="684"></a>
+  <a href=""><img src="../assets/notice2_03.jpg" height="161" width="684"></a>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'notice2',
-  data () {
-    return {
-      msg: ''
-    }
-  }
+  name: 'notice2'
 }
 </script>
 

@@ -1,31 +1,31 @@
 <template>
   <div id="app">
     <guide @showtip="ishow"/>
-    <signInDays :day="person.running_days"/>
+    <totaldays :day="person.running_days"/>
     <signIn :person="person" @signin="postSignMessage"/>
-    <signDate :signdata="person.sign_data"/>
-    <myGolds :person="person"/>
+    <signdate :signdata="person.sign_data"/>
+    <mygolds :person="person"/>
     <notice/>
     <notice2/>
-    <hotsell v-bind:headtitle="headtitle[0]"/>
+    <selling v-bind:headtitle="headtitle[0]"/>
     <job/>
-    <hotsell v-bind:headtitle="headtitle[1]"/>
-    <tips :ishow="show" @showtip="ishow"/>
+    <selling v-bind:headtitle="headtitle[1]"/>
+    <ruletips :ishow="show" @showtip="ishow"/>
     <goods :goods="items"/>
   </div>
 </template>
 
 <script>
 import guide from './components/guide'
-import signInDays from './components/signInDays'
+import totaldays from './components/totaldays'
 import signIn from './components/signIn'
-import signDate from './components/signDate'
-import myGolds from './components/myGolds'
+import signdate from './components/signdate'
+import mygolds from './components/mygolds'
 import notice from './components/notice'
 import notice2 from './components/notice2'
 import job from './components/job'
-import hotsell from './components/hotsell'
-import tips from './components/tips'
+import selling from './components/selling'
+import ruletips from './components/ruletips'
 import goods from './goods'
 
 export default {
@@ -48,10 +48,12 @@ export default {
     ishow: function(data){
       return this.show = data
     },
+    // 获取商品列表
     getGoods: async function(){
       let resp = await this.$http.get('https://www.xiaohongchun.com.cn/lsj/v1/home/rec?page_mark=0&page_size=20&is_sign=1')
       this.items = resp.data.data
     },
+    // 获取个人信息
     personalInfomation: async function(){
       let resp = await this.$http({
         method: 'get',
@@ -63,8 +65,7 @@ export default {
       })
       this.person = resp.data      
     },
-
-    
+    // post签到信息
     postSignMessage: async function(){
       let resp = await this.$http({
         method: 'post',
@@ -78,7 +79,7 @@ export default {
         }
       })
     },
-
+    // 原生写法
     // personalInfomation: function(){
     //   this.$http({
     //     method: 'get',
@@ -96,20 +97,19 @@ export default {
     this.getGoods();
     this.personalInfomation();
   },
-  // beforeCreate(){},
   components: {
     guide,
-    signInDays,
+    totaldays,
     signIn,
-    signDate,
-    myGolds,
+    signdate,
+    mygolds,
     notice,
     notice2,
     job,
-    hotsell,
-    tips,
+    selling,
+    ruletips,
     goods 
-  },
+  }
 }
 </script>
 
@@ -119,7 +119,5 @@ body{
   background-size: contain;
   background-position: top center;
   margin:.35rem;
-}
-#app{
 }
 </style>

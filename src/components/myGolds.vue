@@ -10,12 +10,8 @@
 
 <script>
 export default {
-  name: 'myGolds',
-  props: ['person'],
-  data () {
-    return {
-    }
-  }
+  name: 'mygolds',
+  props: ['person']
 }
 </script>
 

@@ -1,8 +1,8 @@
 <template>
-		<div class="guide" @click="tip">
- 		   <span class="rule">{{msg}}</span>
- 		   <div class="circle">?</div>
- 		 </div>
+	<div class="guide" @click="tip">
+	   <span class="rule">{{msg}}</span>
+	   <div class="circle">?</div>
+	 </div>
 </template>
 
 <script>

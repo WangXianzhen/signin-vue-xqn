@@ -6,12 +6,8 @@
 
 <script>
 export default {
-  name: 'signInDays',
-  props: ['day'],
-  data () {
-    return {
-    }
-  }
+  name: 'totaldays',
+  props: ['day']
 }
 </script>
 

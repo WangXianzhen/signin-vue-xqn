@@ -1,23 +1,20 @@
 <template>
   <div class="signdate">
-  	
   	<ul class="gold">
 		<li v-bind:class="{done: day.signed}"
 			v-for="day in signdata"
 			:key="day.serial"
 			>+{{day.coin}}<img v-show="day.signed" src="../assets/gou_03.png"></li>
   	</ul>
-
   	<ul class="day">
 		<li>第一天</li><li>第二天</li><li>第三天</li><li>第四天</li><li>第五天</li><li>第六天</li><li>第七天</li>
   	</ul>
-
   </div>
 </template>
 
 <script>
 export default {
-  name: 'signDate',
+  name: 'signdate',
   props: ['signdata'],
 }
 </script>

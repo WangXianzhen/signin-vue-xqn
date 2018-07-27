@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'hotsell',
+  name: 'selling',
   props:['headtitle']
 }
 </script>

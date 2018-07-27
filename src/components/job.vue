@@ -13,8 +13,6 @@
   </div>
 </template>
 
-
-
 <script>
 export default {
   name: 'job',
@@ -37,7 +35,6 @@ export default {
 	margin-right: auto;
 	font-size: 0;
 }
-
 .job div {
 	display: inline-block;
 	width: 49%;
@@ -46,7 +43,6 @@ export default {
 	height: 1.56rem;
 	margin: .5%;
 }
-
 .add{
 	font-size: .5rem;
 	display: inline-block;

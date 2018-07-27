@@ -28,7 +28,7 @@
 
 <script>
 export default {
-  name: 'tips',
+  name: 'ruletips',
   data () {
     return {
     	signtip: '签到说明',

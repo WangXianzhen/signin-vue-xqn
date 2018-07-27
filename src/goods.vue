@@ -14,6 +14,7 @@
 	</ul>
 </template>
 
+
 <script type="text/javascript">
 	export default {
 		name: 'goods',
@@ -21,15 +22,13 @@
 	}
 </script>
 
+
 <style scoped>
 ul{
 	padding: 0px;
 	margin: 0px;
 	margin-top: .2rem;
 }
-/* a{
-	text-decoration: none;
-} */
 li{
 	list-style: none;
 	overflow: hidden;
