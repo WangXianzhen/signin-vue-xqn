@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     sign: function(){
-      if (isDone == false) {
+      if (this.isDone == false) {
       this.$emit("signin",true)
       return this.isDone = true        
       }

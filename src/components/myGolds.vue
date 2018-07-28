@@ -29,7 +29,7 @@ export default {
 	width: .7rem;
 	height: .7rem;
 	margin-left: .3rem;
-	border: 1px solid black;
+	/* border: 1px solid black; */
 	border-radius: 50%;
 /* 	background: url(../assets/logo.png);
 	background-size: contain; */

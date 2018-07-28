@@ -78,6 +78,7 @@ export default {
           "formId": "1532611036745"
         }
       })
+      this.personalInfomation()
     },
     // 原生写法
     // personalInfomation: function(){
