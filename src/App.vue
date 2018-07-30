@@ -59,7 +59,7 @@ export default {
         method: 'get',
         url: 'https://www.xiaohongchun.com.cn/lsj/v3/daily_sign',
         headers: {
-          'token': '570694 3f4c9bfb037ef1fab268195eab92340678010473',
+          'token': '570694 0dea801d039dde685ba40e0378f1b49c2f357c37',
           'request-id': Math.random()
         }
       })
@@ -71,7 +71,7 @@ export default {
         method: 'post',
         url: 'https://www.xiaohongchun.com.cn/lsj/v3/daily_sign',
         headers: {
-          'token': '570694 3f4c9bfb037ef1fab268195eab92340678010473',
+          'token': '570694 0dea801d039dde685ba40e0378f1b49c2f357c37',
           'request-id': Math.random()
         },
         data: {
