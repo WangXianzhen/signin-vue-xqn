@@ -1,32 +1,32 @@
 <template>
   <div id="app">
-    <guide @showtip="ishow"/>
-    <totaldays :day="person.running_days"/>
-    <signIn :person="person" @signin="postSignMessage"/>
-    <signdate :signdata="person.sign_data"/>
-    <mygolds :person="person"/>
-    <notice/>
-    <notice2/>
+    <ViewRule @showtip="ishow"/>
+    <TotalDays :day="person.running_days"/>
+    <SignIn :person="person" @SignIn="postSignMessage"/>
+    <SignDate :signdata="person.sign_data"/>
+    <MyGolds :person="person"/>
+    <NoticeMsg/>
+    <NoticeMsg2/>
     <selling v-bind:headtitle="headtitle[0]"/>
-    <job/>
+    <TaskForGolds/>
     <selling v-bind:headtitle="headtitle[1]"/>
-    <ruletips :ishow="show" @showtip="ishow"/>
-    <goods :goods="items"/>
+    <RuleTips :ishow="show" @showtip="ishow"/>
+    <GoodsList :goods="items"/>
   </div>
 </template>
 
 <script>
-import guide from './components/guide'
-import totaldays from './components/totaldays'
-import signIn from './components/signIn'
-import signdate from './components/signdate'
-import mygolds from './components/mygolds'
-import notice from './components/notice'
-import notice2 from './components/notice2'
-import job from './components/job'
+import ViewRule from './components/ViewRule'
+import TotalDays from './components/TotalDays'
+import SignIn from './components/SignIn'
+import SignDate from './components/SignDate'
+import MyGolds from './components/MyGolds'
+import NoticeMsg from './components/NoticeMsg'
+import NoticeMsg2 from './components/NoticeMsg2'
+import TaskForGolds from './components/TaskForGolds'
 import selling from './components/selling'
-import ruletips from './components/ruletips'
-import goods from './goods'
+import RuleTips from './components/RuleTips'
+import GoodsList from './GoodsList'
 
 export default {
   name: 'App',
@@ -95,21 +95,21 @@ export default {
     // }
   },
   created() {
-    this.getGoods();
     this.personalInfomation();
+    this.getGoods();
   },
   components: {
-    guide,
-    totaldays,
-    signIn,
-    signdate,
-    mygolds,
-    notice,
-    notice2,
-    job,
+    ViewRule,
+    TotalDays,
+    SignIn,
+    SignDate,
+    MyGolds,
+    NoticeMsg,
+    NoticeMsg2,
+    TaskForGolds,
     selling,
-    ruletips,
-    goods 
+    RuleTips,
+    GoodsList 
   }
 }
 </script>
