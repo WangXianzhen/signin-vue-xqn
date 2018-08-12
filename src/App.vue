@@ -2,11 +2,11 @@
   <div id="app">
     <ViewRule @showtip="ishow"/>
     <TotalDays :day="person.running_days"/>
-    <SignIn :person="person" @SignIn="postSignMessage"/>
+    <SignIn :person="person" @signin="postSignMessage"/>
     <SignDate :signdata="person.sign_data"/>
     <MyGolds :person="person"/>
     <NoticeMsg/>
-    <NoticeMsg2/>
+    <!-- <NoticeMsg2/> -->
     <selling v-bind:headtitle="headtitle[0]"/>
     <TaskForGolds/>
     <selling v-bind:headtitle="headtitle[1]"/>
@@ -33,7 +33,18 @@ export default {
   data(){
     return{
       items: [],
-      person: null,
+      person: {
+        "user": {
+          "nick": "徐启能",
+          "icon": "https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKBQibGn2dNyI7RI2kwAjkCZGTwhd57RoFBbDMcWECpFXazq20KS62icKdlVN4ia4micv6vK7Cxpfw6zQ/132"
+        },
+        "signed": false,
+        "coin": 0,
+        "running_days": 0,
+        "sign_data": [{
+          "coin": 1,
+        }],
+      },
       headtitle:[{
         "ch":'做任务 领金币',
         "en":'WELFARE'
@@ -59,11 +70,11 @@ export default {
         method: 'get',
         url: 'https://www.xiaohongchun.com.cn/lsj/v3/daily_sign',
         headers: {
-          'token': '570694 0dea801d039dde685ba40e0378f1b49c2f357c37',
+          'token': '570694 d85864c7322962a87e34f24c87f7d31073e34740',
           'request-id': Math.random()
         }
       })
-      this.person = resp.data      
+      this.person = resp.data 
     },
     // post签到信息
     postSignMessage: async function(){
@@ -71,7 +82,7 @@ export default {
         method: 'post',
         url: 'https://www.xiaohongchun.com.cn/lsj/v3/daily_sign',
         headers: {
-          'token': '570694 0dea801d039dde685ba40e0378f1b49c2f357c37',
+          'token': '570694 d85864c7322962a87e34f24c87f7d31073e34740',
           'request-id': Math.random()
         },
         data: {
@@ -86,7 +97,7 @@ export default {
     //     method: 'get',
     //     url: 'https://www.xiaohongchun.com.cn/lsj/v3/daily_sign',
     //     headers: {
-    //       'token': '570694 80105118882222a9f90c1161fd88018ce392ae45',
+    //       'token': '570694 bd0e23fa55c3641639e631d647a8701054453feb',
     //       'request-id': Math.random()
     //     }
     //   }).then((response)=>{

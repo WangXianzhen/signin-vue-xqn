@@ -32,12 +32,10 @@ ul{
 li{
 	list-style: none;
 	overflow: hidden;
-	display: relative;
 	border-top: .01rem solid #f1f1f1;
 }
 .imgs{
 	float: left;
-	display: block;
 	margin: .25rem;
 	margin-left: .05rem;
 	width: 2rem;
@@ -48,7 +46,6 @@ img{
 	height: 2rem;
 }
 .information{
-	display: block;
 	overflow: hidden;
 }
 .information header{

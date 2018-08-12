@@ -12,7 +12,6 @@ export default {
   props: ['person'],
   data () {
     return {
-      isDone : this.person.signed
     }
   },
   computed:{
@@ -20,8 +19,11 @@ export default {
       if (this.isDone) {
         return "今日已签到"
       } else {
-        return "5"
+        return this.person.sign_data[this.person.running_days].coin
       }
+    },
+    isDone:function(){
+      return this.person.signed
     }
   },
   methods: {
