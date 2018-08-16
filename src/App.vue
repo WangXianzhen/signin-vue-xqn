@@ -26,7 +26,7 @@ import NoticeMsg2 from './components/NoticeMsg2'
 import TaskForGolds from './components/TaskForGolds'
 import selling from './components/selling'
 import RuleTips from './components/RuleTips'
-import GoodsList from './GoodsList'
+import GoodsList from './components/GoodsList'
 
 export default {
   name: 'App',
@@ -70,7 +70,7 @@ export default {
         method: 'get',
         url: 'https://www.xiaohongchun.com.cn/lsj/v3/daily_sign',
         headers: {
-          'token': '570694 d85864c7322962a87e34f24c87f7d31073e34740',
+          'token': '570694 4efec84664eaec9cfa88da81cf9676992265835e',
           'request-id': Math.random()
         }
       })
@@ -82,7 +82,7 @@ export default {
         method: 'post',
         url: 'https://www.xiaohongchun.com.cn/lsj/v3/daily_sign',
         headers: {
-          'token': '570694 d85864c7322962a87e34f24c87f7d31073e34740',
+          'token': '570694 4efec84664eaec9cfa88da81cf9676992265835e',
           'request-id': Math.random()
         },
         data: {
